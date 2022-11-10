@@ -35,46 +35,101 @@ Müşterimizin talepleri doğrultusunda user makineden yiyecek-içeçek alabilme
         Runner Class ı Nitelikleri;
 
         accountBalance = 3*/
-    Double kraker=2.5;
-    Double cips=2.2;
-    Double cocaCola=2.2;
-    Double fanta=2.0;
-    Double su=1.0;
-    Double cay=1.5;
-    Double filtreKahve=1.99;
-    int UrunNO;
-    Double fiyat;
-    Double hesap;
+   private double kraker=2.5;
+   private double cips=2.2;
+   private double cocaCola=2.2;
+    private double fanta=2.0;
+    private double su=1.0;
+    private double cay=1.5;
+    private  double filtreKahve=1.99;
+   private int productNum;
+   private  double price;
     public Urun(){
 
     }
 
-    public Urun(Double kraker, Double cips, Double cocaCola, Double fanta, Double su, Double cay, Double filtreKahve, int urunNO, Double fiyat, Double hesap) {
+    public double getKraker() {
+        return kraker;
+    }
+
+    public void setKraker(double kraker) {
         this.kraker = kraker;
+    }
+
+    public double getCips() {
+        return cips;
+    }
+
+    public void setCips(double cips) {
         this.cips = cips;
+    }
+
+    public double getCocaCola() {
+        return cocaCola;
+    }
+
+    public void setCocaCola(double cocaCola) {
         this.cocaCola = cocaCola;
+    }
+
+    public double getFanta() {
+        return fanta;
+    }
+
+    public void setFanta(double fanta) {
         this.fanta = fanta;
+    }
+
+    public double getSu() {
+        return su;
+    }
+
+    public void setSu(double su) {
         this.su = su;
+    }
+
+    public double getCay() {
+        return cay;
+    }
+
+    public void setCay(double cay) {
         this.cay = cay;
+    }
+
+    public double getFiltreKahve() {
+        return filtreKahve;
+    }
+
+    public void setFiltreKahve(double filtreKahve) {
         this.filtreKahve = filtreKahve;
-        UrunNO = urunNO;
-        this.fiyat = fiyat;
-        this.hesap = hesap;
+    }
+
+    public int getProductNum() {
+        return productNum;
+    }
+
+    public void setProductNum(int productNum) {
+        this.productNum = productNum;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return "Urun Listesi{" +
-                " 1 kraker=" + kraker +
-                ",2  cips=" + cips +
-                ",3  cocaCola=" + cocaCola +
-                ",4 fanta=" + fanta +
-                ",5 su=" + su +
-                ",6 cay=" + cay +
-                ",7 filtreKahve=" + filtreKahve +
-                ",8 UrunNO=" + UrunNO +
-                ",9 fiyat=" + fiyat +
-                ",10 hesap=" + hesap +
-                '}';
+        return "Urun{" +
+                "\n1->kraker=" + kraker +
+                ",\n2->cips=" + cips +
+                ",\n3->cocaCola=" + cocaCola +
+                ",\n4-> fanta=" + fanta +
+                ",\n5-> su=" + su +
+                ",\n6> cay=" + cay +
+                ",\n7> filtreKahve=" + filtreKahve
+                ;
     }
 }
