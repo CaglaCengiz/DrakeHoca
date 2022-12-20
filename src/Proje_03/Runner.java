@@ -10,5 +10,6 @@ public class Runner {
         urun.setPrice(options.select(urun));
        hesapBakiyesi= options.balance(urun.getPrice(), hesapBakiyesi, urun);
       //  System.out.println(hasapBakiyesi);
+        options.purshase(urun.getPrice(), hesapBakiyesi,urun);
     }
 }

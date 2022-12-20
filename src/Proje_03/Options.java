@@ -32,6 +32,7 @@ public class Options {
         switch (urun.getProductNum()) {
             case 0:
                 System.out.println("yıne bekleriz");
+                System.exit(0);
                 break;
 
             case 1:
@@ -77,13 +78,30 @@ public class Options {
                 hesapBakiyesi =hesapBakiyesi+fonlama;
                 System.out.println("yeni bakiyeniz" + hesapBakiyesi);
 
+            }
+        }
+        return hesapBakiyesi;
+    }
+    public void purshase(double price, double hesapBakiyesi, Urun urun) {
+        while (hesapBakiyesi>price){
+            hesapBakiyesi=hesapBakiyesi-price;
+            System.out.println("kalan bakıye " +hesapBakiyesi);
+            Scanner scanner=new Scanner(System.in);
+            System.out.println("baska urun almak ıstıyormusun(Y/N)");
+            char confirm=scanner.next().toLowerCase().charAt(0);
 
+            if (confirm=='n'){
+            System.out.println("yıne bekleriz");
+            break;
 
+        }else {
+                urun.setPrice(select(urun));
+             hesapBakiyesi= balance(urun.getPrice(), hesapBakiyesi,urun);
 
 
             }
+
         }
 
-        return hesapBakiyesi;
     }
 }
